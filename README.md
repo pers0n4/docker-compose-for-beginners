@@ -1,4 +1,4 @@
-# Docker Compose로 개발 생성성 높이기
+# Docker Compose로 개발 생산성 높이기
 
 ## 실행
 
