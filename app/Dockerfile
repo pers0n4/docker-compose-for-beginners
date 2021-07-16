@@ -1,5 +1,7 @@
 FROM python:3.8
 
+LABEL maintainer="Dong-Young Kim <31337.persona@gmail.com>"
+
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
