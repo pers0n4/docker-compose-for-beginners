@@ -11,7 +11,7 @@ docker-compose up -d
 # 특정 서비스만 실행
 docker-compose up backend ...
 
-# 빌드 실행
+# 빌드하고 실행
 docker-compose up --build
 ```
 
@@ -27,7 +27,7 @@ docker-compose down --volumes
 docker-compose down --rmi local
 ```
 
-## *Docker Swarm
+## Docker Swarm
 
 ```bash
 docker swarm init
@@ -38,6 +38,8 @@ docker node ls
 docker service create --name registry --publish published=5000,target=5000 --constraint node.role==manager registry:2
 docker-compose --file docker-stack.yaml build
 docker-compose --file docker-stack.yaml push
+
+docker-machine create --driver virtualbox --virtualbox-memory 1024 --engine-insecure-registry 127.0.0.1:5000 worker2
 
 docker stack deploy --compose-file docker-stack.yaml STACK
 docker stack services STACK
